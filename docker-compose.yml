@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  app-financeiro:
+    container_name: app_financeiro_ben
+    build: .
+    restart: unless-stopped
+    ports:
+      # Mapeia a porta 80 do servidor (acesso web) para a 8080 do container
+      - "80:8080"
+    environment:
+      - PORT=8080
+      - FLET_SECRET_KEY=uma_chave_secreta_aleatoria_aqui
