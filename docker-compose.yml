@@ -7,7 +7,7 @@ services:
     restart: unless-stopped
     ports:
       # Mapeia a porta 80 do servidor (acesso web) para a 8080 do container
-      - "80:8080"
+      - "80:8090"
     environment:
-      - PORT=8080
+      - PORT=8090
       - FLET_SECRET_KEY=uma_chave_secreta_aleatoria_aqui
